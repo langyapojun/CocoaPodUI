@@ -39,7 +39,7 @@
 {
     self = [super initWithNibName:@"CreatePodController" bundle:[NSBundle bundleForClass:[self class]]];
     [self setPlatformName:@"iOS"];
-    [self setPlatformVersion:@"4.3"];
+    [self setPlatformVersion:@"7.0"];
     return self;
 }
 
@@ -65,17 +65,17 @@
 {
     [self willChangeValueForKey:@"versions"];
     _platformName = platformName;
-    [_platformName isEqualToString:@"iOS"] ? [self setPlatformVersion:@"4.3"] : [self setPlatformVersion:@"10.5"];
+    [_platformName isEqualToString:@"iOS"] ? [self setPlatformVersion:@"7.0"] : [self setPlatformVersion:@"10.8"];
     [self didChangeValueForKey:@"versions"];
 }
 
 - (NSArray *)versions
 {
     if ([self.platformName isEqualToString:@"iOS"]) {
-        return @[@"4.3", @"5.0", @"6.0", @"7.0"];
+        return @[@"4.3", @"5.0", @"6.0", @"7.0", @"8.0"];
     }
     else {
-        return @[@"10.5", @"10.6", @"10.7", @"10.8", @"10.9"];
+        return @[@"10.5", @"10.6", @"10.7", @"10.8", @"10.9", @"10.10"];
     }
 }
 @end
